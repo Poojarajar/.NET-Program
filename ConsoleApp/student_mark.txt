@@ -1,0 +1,88 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        string s_id;
+        string name;
+        int maths;
+        int eng;
+        int tamil;
+        int science;
+        int social;
+        
+        Console.WriteLine("Enter the student id: ");
+        s_id = Console.ReadLine();
+        
+        Console.WriteLine("Enter the student name: ");
+        name = Console.ReadLine();
+        
+        Console.WriteLine("Enter the maths mark: ");
+        maths = Convert.ToInt32(Console.ReadLine());
+        
+        Console.WriteLine("Enter the english mark: ");
+        eng = Convert.ToInt32(Console.ReadLine());
+        
+        Console.WriteLine("Enter the tamil mark: ");
+        tamil = Convert.ToInt32(Console.ReadLine());
+        
+        Console.WriteLine("Enter the science mark: ");
+        science = Convert.ToInt32(Console.ReadLine());
+        
+        Console.WriteLine("Enter the social mark: ");
+        social = Convert.ToInt32(Console.ReadLine());
+        
+        int avg = (eng + tamil + maths + science + social) / 5;
+        
+        Console.WriteLine("Average mark: " + avg);
+        
+        if (avg > 40)
+        {
+            if (avg >= 90)
+            {
+                Console.WriteLine("Grade: Excellent");
+            }
+            else if (avg >= 80)
+            {
+                Console.WriteLine("Grade: Very Good");
+            }
+            else if (avg >= 60)
+            {
+                Console.WriteLine("Grade: Good");
+            }
+            else if (avg >= 50)
+            {
+                Console.WriteLine("Grade: Need more improvement");
+            }
+            else 
+            {
+                Console.WriteLine("Grade: Below Average");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Failed in Exam!!");
+        }
+    }
+}
+
+
+
+O/P:
+Enter the student id: 
+A27
+Enter the student name: 
+pooja
+Enter the maths mark: 
+89
+Enter the english mark: 
+87
+Enter the tamil mark: 
+76
+Enter the science mark: 
+87
+Enter the social mark: 
+99
+Average mark: 87
+Grade: Very Good

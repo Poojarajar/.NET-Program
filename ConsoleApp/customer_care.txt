@@ -1,0 +1,42 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+       Console.WriteLine("\t\t\t\t\tCustomer Care");
+       Console.WriteLine("\t\t\t\t******************");
+       Console.WriteLine("Select a language");
+       Console.WriteLine("1. English\n2. Tamil\n3. Kannada");
+       int choice = Convert.ToInt32(Console.ReadLine());
+       switch(choice){
+           case 1:{
+               Console.WriteLine("English is selected as your language.");
+               Console.WriteLine("Sree is your customer care executive he will contact you soon...");
+               break;
+           }
+           case 2:{
+               Console.WriteLine("Tamil is selected as your language.");
+               Console.WriteLine("Ramesh is your customer care executive he will contact you soon...");
+               break;
+           }
+           case 3:{
+               Console.WriteLine("Kannada is selected as your language.");
+               Console.WriteLine("Ram is your customer care executive he will contact you soon...");
+               break;
+           }
+       }
+    }
+}
+
+
+O/P:
+					Customer Care
+				******************
+Select a language
+1. English
+2. Tamil
+3. Kannada
+1
+English is selected as your language.
+Sree is your customer care executive he will contact you soon...

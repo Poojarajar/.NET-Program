@@ -1,0 +1,81 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+       Console.WriteLine("\t\t\t\tCoffee Shop");
+       Console.WriteLine("\t\t************************");
+       Console.WriteLine("Select your Membership");
+       Console.WriteLine("1. Gold membership\n2. Silver membership\n3. Bronze membership\n4. Not have membership");
+       int choice = Convert.ToInt32(Console.ReadLine());
+       switch(choice){
+           case 1:
+           {
+               Console.WriteLine("\t\t\t\tGold Membership");
+               Console.WriteLine("Enter order amount:");
+               int order_amount =Convert.ToInt32(Console.ReadLine());
+               if(order_amount>50){
+                   int discount_rate=20;
+                   int discount=(order_amount*discount_rate)/100;
+                   Console.WriteLine("Original amount: "+order_amount);
+                   Console.WriteLine("Discount amount :"+discount);
+                   Console.WriteLine("Bill: "+(order_amount-discount));
+               }
+               break;
+           }
+           case 2:
+           {
+               Console.WriteLine("\t\t\t\tSilver Membership");
+               Console.WriteLine("Enter order amount:");
+               int order_amount =Convert.ToInt32(Console.ReadLine());
+               if(order_amount>30){
+                   int discount_rate=10;
+                   int discount=(order_amount*discount_rate)/100;
+                   Console.WriteLine("Original amount: "+order_amount);
+                   Console.WriteLine("Discount amount :"+discount);
+                   Console.WriteLine("Bill: "+(order_amount-discount));
+               }
+               break;
+           }
+           case 3:
+           {
+               Console.WriteLine("\t\t\t\tBronze Membership");
+               Console.WriteLine("Enter order amount:");
+               int order_amount =Convert.ToInt32(Console.ReadLine());
+               int discount_rate=5;
+               int discount=(order_amount*discount_rate)/100;
+               Console.WriteLine("Original amount: "+order_amount);
+               Console.WriteLine("Discount amount :"+discount);
+               Console.WriteLine("Bill: "+(order_amount-discount));
+               break;
+           }
+           case 4:
+           {
+               Console.WriteLine("Sorry you don't have membership so no discount....");
+               Console.WriteLine("Enter order amount:");
+               int order_amount =Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Original amount: "+order_amount);
+                Console.WriteLine("Bill: "+(order_amount));
+               break;
+           }
+       }
+    }
+}
+
+
+O/P:
+				Coffee Shop
+		                    ************************
+Select your Membership
+1. Gold membership
+2. Silver membership
+3. Bronze membership
+4. Not have membership
+1
+				Gold Membership
+Enter order amount:
+70
+Original amount: 70
+Discount amount :14
+Bill: 56

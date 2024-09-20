@@ -1,0 +1,22 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the value 1: ");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the value 2: ");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+         string result = (num1 > num2) ? $"[{num2}, {num1}]" : $"[{num1}, {num2}]";
+        Console.WriteLine(result);
+    }
+}
+
+
+O/P:
+Enter the value 1: 
+12
+Enter the value 2: 
+34
+[12, 34]

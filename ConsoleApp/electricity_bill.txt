@@ -1,0 +1,76 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+       Console.WriteLine("\t\t\tElectricity Bill");
+       Console.WriteLine("Select your choice");
+       Console.WriteLine("1. Residential area");
+       Console.WriteLine("2. Commercial area");
+       int choice = Convert.ToInt32(Console.ReadLine());
+       switch(choice)
+       {
+           case 1:{
+               Console.WriteLine("\t\t\tResidential Electricity Bill");
+               Console.WriteLine("Enter Consumed unit: ");
+               int consumed_unit = Convert.ToInt32(Console.ReadLine());
+               if(consumed_unit<=50){
+                   Console.WriteLine("Electricity bill : 0");
+               }
+               else if(consumed_unit>50 && consumed_unit<=150){
+                   double bill = (consumed_unit-50)*5.5;
+                   Console.WriteLine("Electricity bill :"+bill);
+               }
+               else if(consumed_unit>150 && consumed_unit<=250){
+                   double bill = (consumed_unit-50)*8.5;
+                   Console.WriteLine("Electricity bill :"+bill);
+               }
+               else if(consumed_unit>250 && consumed_unit<=500){
+                   double bill = (consumed_unit-50)*13;
+                   Console.WriteLine("Electricity bill :"+bill);
+               }
+               else{
+                   Console.WriteLine("Your under commerial user");
+               }
+               break;
+           }
+           case 2:{
+               Console.WriteLine("\t\t\tCommerial Electricity Bill");
+               Console.WriteLine("Enter Consumed unit: ");
+               int consumed_unit1 = Convert.ToInt32(Console.ReadLine());
+               if(consumed_unit1<=50){
+                   Console.WriteLine("Electricity bill : 10");
+               }
+               else if(consumed_unit1>50 && consumed_unit1<=150){
+                   double bill = (consumed_unit1-50)*15.5;
+                   Console.WriteLine("Electricity bill :"+bill);
+               }
+               else if(consumed_unit1>150 && consumed_unit1<=250){
+                   double bill = (consumed_unit1-50)*18.5;
+                   Console.WriteLine("Electricity bill :"+bill);
+               }
+               else if(consumed_unit1>250 && consumed_unit1<=500){
+                   double bill = (consumed_unit1-50)*23;
+                   Console.WriteLine("Electricity bill :"+bill);
+               }
+               break;
+           }
+       }
+       Console.WriteLine("Thank you!!!");
+    }
+}
+
+
+O/P:
+
+			Electricity Bill
+Select your choice
+1. Residential area
+2. Commercial area
+1
+			Residential Electricity Bill
+Enter Consumed unit: 
+75
+Electricity bill :137.5
+Thank you!!!
